@@ -3,6 +3,7 @@ package com.vicent.o2o.web.superadmin.shopadmin;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vicent.o2o.dto.ShopExecution;
 import com.vicent.o2o.entity.Area;
+import com.vicent.o2o.entity.LocalAuth;
 import com.vicent.o2o.entity.PersonInfo;
 import com.vicent.o2o.entity.Shop;
 import com.vicent.o2o.entity.ShopCategory;
@@ -237,15 +238,22 @@ public class ShopManagementContorller {
     @ResponseBody
     private Map<String, Object> getShopList(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
-        PersonInfo user = new PersonInfo();
-        user.setUserId(1L);
-        user.setName("test");
+		Object userObj = request.getSession().getAttribute("user");
+		PersonInfo user;
+		if (userObj == null) {
+			user = new PersonInfo();
+	        user.setUserId(1L);
+	        user.setName("test");
+		}else {
+			user = (PersonInfo)userObj;
+		}
         request.getSession().setAttribute("user", user);
         user = (PersonInfo) request.getSession().getAttribute("user");
         try {
             Shop shopCondition = new Shop();
             shopCondition.setOwner(user);
             ShopExecution se = shopService.getShopList(shopCondition, 0, 100);
+            request.getSession().setAttribute("shopList",se.getShopList());
             modelMap.put("shopList", se.getShopList());
             modelMap.put("user", user);
             modelMap.put("success", true);
