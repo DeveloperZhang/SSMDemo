@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.frontend;
+package com.vicent.o2o.web.frontend;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,5 +36,15 @@ public class FrontendController {
 	@RequestMapping(value = "/shopdetail", method = RequestMethod.GET)
 	private String showShopDetail() {
 		return "frontend/shopdetail";
+	}
+	
+	/**
+	 * 消费记录列表页路由
+	 * 
+	 * @return
+	 */
+	@RequestMapping(value = "/myrecord", method = RequestMethod.GET)
+	private String showMyRecord() {
+		return "frontend/myrecord";
 	}
 }

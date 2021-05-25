@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.local;
+package com.vicent.o2o.web.local;
 
 import com.vicent.o2o.dao.PersonInfoDao;
 import com.vicent.o2o.dto.LocalAuthExecution;

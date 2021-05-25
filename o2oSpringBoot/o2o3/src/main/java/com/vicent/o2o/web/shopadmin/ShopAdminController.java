@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.shopadmin;
+package com.vicent.o2o.web.shopadmin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,6 +49,12 @@ public class ShopAdminController {
 	public String productManagement() {
 		// 转发至商品管理页面
 		return "shop/productmanagement";
+	}
+	
+	@RequestMapping(value = "/productbuycheck", method = RequestMethod.GET)
+	private String productBuyCheck() {
+		// 转发至店铺的消费记录的页面
+		return "shop/productbuycheck";
 	}
 	
 }

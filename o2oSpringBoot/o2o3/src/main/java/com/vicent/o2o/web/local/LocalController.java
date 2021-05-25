@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.local;
+package com.vicent.o2o.web.local;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

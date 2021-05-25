@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin;
+package com.vicent.o2o.web;
 
 import com.vicent.o2o.entity.Area;
 import com.vicent.o2o.service.AreaService;

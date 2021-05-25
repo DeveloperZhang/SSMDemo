@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.cache;
+package com.vicent.o2o.web.cache;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

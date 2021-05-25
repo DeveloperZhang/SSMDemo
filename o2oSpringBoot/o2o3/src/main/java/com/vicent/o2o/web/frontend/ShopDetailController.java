@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.frontend;
+package com.vicent.o2o.web.frontend;
 
 import com.vicent.o2o.dto.ProductExecution;
 import com.vicent.o2o.entity.Product;

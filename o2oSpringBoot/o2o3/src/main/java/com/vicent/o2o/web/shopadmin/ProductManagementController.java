@@ -1,4 +1,4 @@
-package com.vicent.o2o.web.superadmin.shopadmin;
+package com.vicent.o2o.web.shopadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vicent.o2o.dto.ImageHolder;
